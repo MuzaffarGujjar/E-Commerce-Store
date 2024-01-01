@@ -1,8 +1,7 @@
-import React from 'react'
-import { ImQuotesLeft } from "react-icons/im"
+import React from 'react';
+import { ImQuotesLeft } from 'react-icons/im';
 
-
-const Reviewcard = ({ name }) => {
+const ReviewCard = ({ name }) => {
   return (
     <div className='flex flex-col w-full lg:w-2/6 border-2 border-DarkColor p-3 rounded-lg gap-5 cursor-pointer hover:bg-PrimaryColor transition duration-300 ease-in-out'>
       <div>
@@ -15,7 +14,7 @@ const Reviewcard = ({ name }) => {
         delight. Efficient service and diverse products
         ensure a satisfying shopping experience.</p>
     </div>
-  )
-}
+  );
+};
 
-export default Reviewcard
+export default ReviewCard;
