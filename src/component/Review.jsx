@@ -1,5 +1,5 @@
 import React from 'react'
-import ReviewCard from './layouts/Reviewcard'
+import ReviewCard from './layouts/ReviewCard'
 
 const Review = () => {
   return (

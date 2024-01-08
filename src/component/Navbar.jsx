@@ -102,7 +102,7 @@ const Navbar = () => {
                 <button className='bg-ExtraDarkColor text-white w-full py-2 font-medium rounded'>
                     Proceed to Buy
                 </button>
-                <button className='border-2 border-DarkColor text-black w-full my-2 py-2'>
+                <button className='border-2 border-DarkColor text-black w-full my-2 py-2 rounded'>
                     Go to Cart
                 </button>
             </div>
