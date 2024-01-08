@@ -19,7 +19,7 @@ const ProductCard = ({ id, img, name, price, discount }) => {
         };
 
         dispatch(addToCart(payload));
-        toast.success("Added to Cart Successfully")
+        toast.success("Add to Cart Successfully")
     };
 
 
