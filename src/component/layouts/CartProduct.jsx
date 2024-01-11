@@ -1,6 +1,6 @@
 import React from 'react'
 import { useAppDispatch } from '../../redux/hooks'
-import { RxCross1 } from 'react-icons/rx'
+import { MdDelete } from "react-icons/md";
 import { removeFromCart } from '../../redux/features/cartslice';
 
 const CartProduct = ({ id, img, title, price, quantity }) => {
@@ -18,9 +18,10 @@ const CartProduct = ({ id, img, title, price, quantity }) => {
                     <p className='text-gray-600 text-[14px]'>Price: $ {price}</p>
                 </div>
             </div>
-            <RxCross1 className='cursor-pointer' onClick={() => dispatch(removeFromCart(id))}/>
+            <MdDelete className='cursor-pointer text-red-700' onClick={() => dispatch(removeFromCart(id))} />
         </div>
     )
 }
 
 export default CartProduct
+

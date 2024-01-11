@@ -21,6 +21,7 @@ const ProductCard = ({ id, img, name, price, discount }) => {
         dispatch(addToCart(payload));
         toast.success("Add to Cart Successfully")
     };
+    
 
 
 
