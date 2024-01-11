@@ -16,7 +16,7 @@ const Footer = () => {
                     </div>
                 </div>
                 <div>
-                    <h1 className='font-medium text-lg pb-4 pt-5 md:pt-8'>store</h1>
+                    <h1 className='font-medium text-lg pb-4 pt-5 md:pt-8'>Shop</h1>
                     <div className='flex flex-col gap-2'>
                         <Link to='products' spy={true} smooth={true} duration={500} className='hover:scale-105 cursor-pointer transition duration-300 ease-in-out'>
                             Products
