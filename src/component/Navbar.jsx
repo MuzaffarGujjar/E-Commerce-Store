@@ -6,12 +6,17 @@ import { RiMenu2Line } from "react-icons/ri"
 import CartProduct from './layouts/CartProduct';
 import { useAppSelector } from '../redux/hooks';
 import { RxCross1 } from 'react-icons/rx';
+import { useAuth0 } from "@auth0/auth0-react";
 
 
 
 const Navbar = () => {
 
     const [showCart, setShowCart] = useState(false);
+
+    const { user, loginWithRedirect, isAuthenticated, logout } = useAuth0();
+
+
 
     const data = useAppSelector((state) => state.cartReducer);
 
@@ -33,7 +38,7 @@ const Navbar = () => {
 
     const cartCount = useAppSelector((state) => state.cartReducer.length);
 
-  
+
 
 
     return (
@@ -54,6 +59,16 @@ const Navbar = () => {
                             <Link to="features" spy={true} smooth={true} duration={500} className="cursor-pointer hover:text-black transition duration-300 ease-in-out">Features</Link>
                             <Link to="products" spy={true} smooth={true} duration={500} className="cursor-pointer hover:text-black transition duration-300 ease-in-out">Products</Link>
                             <Link to="review" spy={true} smooth={true} duration={500} className="cursor-pointer hover:text-black transition duration-300 ease-in-out">Review</Link>
+
+                            {
+                                isAuthenticated ? (
+                                    <button className='bg-ExtraDarkColor text-white px-6 py-2 font-medium active:bg-amber-800 rounded' onClick={() => logout({ logoutParams: { returnTo: window.location.origin } })}> Log Out</button>
+                                )
+                                    : (
+                                        <button className='bg-ExtraDarkColor text-white px-6 py-2 font-medium active:bg-amber-800 rounded' onClick={() => loginWithRedirect()}>Log In</button>
+                                    )
+                            }
+
                         </nav>
                         {/* nav icons */}
                         <div className='flex items-center gap-5'>
@@ -79,6 +94,8 @@ const Navbar = () => {
                         <Link to="features" spy={true} smooth={true} duration={500} className="cursor-pointer hover:text-black transition duration-300 ease-in-out" onClick={closeMenu}>Features</Link>
                         <Link to="products" spy={true} smooth={true} duration={500} className="cursor-pointer hover:text-black transition duration-300 ease-in-out" onClick={closeMenu}>Products</Link>
                         <Link to="review" spy={true} smooth={true} duration={500} className="cursor-pointer hover:text-black transition duration-300 ease-in-out" onClick={closeMenu}>Review</Link>
+                        <button onClick={() => loginWithRedirect()}>Log In</button>
+                        <button onClick={() => logout({ logoutParams: { returnTo: window.location.origin } })}> Log Out</button>
                     </div>
                 </section>
             </header>

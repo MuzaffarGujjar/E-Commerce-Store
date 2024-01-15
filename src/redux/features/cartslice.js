@@ -1,6 +1,7 @@
 import { createSlice } from "@reduxjs/toolkit";
 import { useEffect } from "react";
 
+
 const initialState = [];
 
 export const cartSlice = createSlice({
@@ -29,8 +30,8 @@ export const cartSlice = createSlice({
 // to add data in localStorage
 
 // useEffect(() => {
-
-// })
+//     localStorage.setItem("StyleNestle",  )
+// }, [])
 
 
 export const { addToCart, removeFromCart } = cartSlice.actions;
