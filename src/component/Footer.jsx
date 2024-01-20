@@ -53,7 +53,7 @@ const Footer = () => {
                         <Link to='/' spy={true} smooth={true} duration={500}>
                             D-Ground, Satiana Road Faisalabad Pakistan
                         </Link>
-                        <Link to='https://muzaffar-techs.vercel.app' spy={true} smooth={true} duration={500}>
+                        <Link to='/' spy={true} smooth={true} duration={500}>
                             muzaffar-techs.vercel.app
                         </Link>
                         <Link to='/' spy={true} smooth={true} duration={500}>
