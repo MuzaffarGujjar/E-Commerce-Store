@@ -3,6 +3,7 @@ import { Link } from 'react-scroll'
 import { FaUser, FaShoppingCart } from "react-icons/fa"
 import { AiOutlineClose } from "react-icons/ai"
 import { RiMenu2Line } from "react-icons/ri"
+import CartProduct from './layouts/CartProduct';
 import { useAppSelector } from '../redux/hooks';
 import { RxCross1 } from 'react-icons/rx';
 import { useAuth0 } from "@auth0/auth0-react";
